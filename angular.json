@@ -30,7 +30,11 @@
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.main.js"
             ]
           },
           "configurations": {
@@ -88,11 +92,23 @@
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.main.js"
             ]
           }
         }
       }
     }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "standalone": true
+    }
+  },
+  "cli": {
+    "analytics": "bc256e68-8a51-497f-811e-4c4e943eada7"
   }
 }
