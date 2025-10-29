@@ -1,0 +1,16 @@
+*{
+    background-color: transparent;
+}
+
+.portal-nav {
+  background: radial-gradient(circle at top left, #00b972, #001f1f);
+  box-shadow: 0 0 20px rgba(0, 255, 159, 0.5);
+}
+
+.portal-nav span{
+  font-family: 'Get Schwifty', cursive;
+  color: #fff;
+  font-size: 1.6rem;
+  text-shadow: 0 0 10px #00ff9f;
+  padding-left: 1rem;
+}

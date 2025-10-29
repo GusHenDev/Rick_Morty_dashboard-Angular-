@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+/* Tema Rick and Morty */
+:root {
+    --bg-color: #0b0c10;
+    --card-bg: #15171c;
+    --text-color: #d6f5d6;
+    --accent-color: #00ff9f;
+    /* verde portal */
+    --secondary-color: #6b5b95;
+    /* roxo */
+    --border-color: #00cc88;
+}
+
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('assets/fonts/get_schwifty.ttf') format('truetype');
+}
+
+body {
+    background: url('assets/images/thumbbig-1335145.webp') center/cover fixed no-repeat;
+    background-color: var(--bg-color);    
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+a,
+button {
+    color: var(--accent-color) !important;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 10px rgba(0, 255, 159, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 159, 0.4);
+}
+
+input,
+.form-control {
+    background-color: #101218;
+    color: #b8fcb8;
+    border: 1px solid var(--border-color);
+}
+
+input:focus {
+    outline: none;
+}

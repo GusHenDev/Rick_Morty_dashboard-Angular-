@@ -1,0 +1,12 @@
+.sidebar {
+      width: 220px;
+      transition: width 0.3s;
+      height:100%;
+    }
+    .sidebar.collapsed {
+      width: 50px;
+    }
+    a.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
