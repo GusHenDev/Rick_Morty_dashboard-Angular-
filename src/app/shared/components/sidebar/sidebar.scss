@@ -1,12 +1,65 @@
 .sidebar {
-      width: 220px;
-      transition: width 0.3s;
-      height:100%;
-    }
-    .sidebar.collapsed {
-      width: 50px;
-    }
-    a.active {
-      font-weight: bold;
-      text-decoration: underline;
-    }
+  width: 220px;
+  height: 100vh;
+  background: #111;
+  padding: 1rem;
+  color: #d6f5d6;
+  transition: width 0.3s ease;
+  position: sticky;
+  top: 0;
+
+  .toggle-btn {
+    background: none;
+    border: none;
+    color: #00ff9f;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+  }
+
+  .toggle-btn:hover {
+    transform: scale(1.2);
+  }
+
+  .nav-link {
+    color: #bdfcc9;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+
+  .nav-link:hover, .active {
+    background: rgba(0, 255, 159, 0.2);
+  }
+
+  i {
+    font-size: 1.4rem;
+  }
+}
+
+/* Quando colapsa */
+.sidebar.collapsed {
+  width: 70px;
+  padding: 0.5rem;
+
+  .nav-link {
+    justify-content: center;
+    gap: 0;
+  }
+
+  .nav-link span {
+    display: none;
+  }
+}
+.sidebar.collapsed {
+  box-shadow: 0 0 25px rgba(0, 255, 159, 0.5);
+  animation: portalCollapse 0.3s ease;
+}
+
+@keyframes portalCollapse {
+  from { box-shadow: 0 0 5px rgba(0,255,159,0.2); }
+  to { box-shadow: 0 0 25px rgba(0,255,159,0.5); }
+}

@@ -1,0 +1,16 @@
+*{    
+    background-color: #0b0c10;
+}
+input::placeholder {
+  color: #00ff9f;
+  text-shadow: 0 0 5px rgba(0, 255, 159, 0.8);
+  opacity: 0.9;  
+}
+.list-group-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 159, 0.4);
+    background-color:#24262f ;
+    *{
+        background-color: #24262f;
+    }
+}

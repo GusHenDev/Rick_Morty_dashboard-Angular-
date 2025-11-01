@@ -1,13 +1,25 @@
-<div class="bg-dark text-white p-3 sidebar" [class.collapsed]="collapsed">
-    <ul class="nav flex-column">
-      <li class="nav-item mb-2">
-        <a class="nav-link text-white" routerLink="/characters" routerLinkActive="active">Characters</a>
-      </li>
-      <li class="nav-item mb-2">
-        <a class="nav-link text-white" routerLink="/locations" routerLinkActive="active">Locations</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" routerLink="/episodes" routerLinkActive="active">Episodes</a>
-      </li>
-    </ul>
-  </div>
+<div class="sidebar" [class.collapsed]="collapsed"> 
+
+  <ul class="nav flex-column mt-3">
+    <li class="nav-item" routerLinkActive="active">
+      <a routerLink="/characters" class="nav-link">
+        <i class="bi bi-person-badge"></i>
+        <span *ngIf="!collapsed">Characters</span>
+      </a>
+    </li>
+
+    <li class="nav-item" routerLinkActive="active">
+      <a routerLink="/locations" class="nav-link">
+        <i class="bi bi-geo-alt"></i>
+        <span *ngIf="!collapsed">Locations</span>
+      </a>
+    </li>
+
+    <li class="nav-item" routerLinkActive="active">
+      <a routerLink="/episodes" class="nav-link">
+        <i class="bi bi-camera-reels"></i>
+        <span *ngIf="!collapsed">Episodes</span>
+      </a>
+    </li>
+  </ul>
+</div>

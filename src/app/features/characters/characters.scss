@@ -1,3 +1,9 @@
 *{
     color: white;
+    background-color: #0b0c10;
+}
+input::placeholder {
+  color: #00ff9f;
+  text-shadow: 0 0 5px rgba(0, 255, 159, 0.8);
+  opacity: 0.9;  
 }

@@ -8,33 +8,8 @@ import { RouterModule } from '@angular/router';
   selector: 'app-characters',
   standalone: true,
   imports: [CommonModule, RouterModule, FormsModule],
-  template: `
-  <div class="container py-3">
-    <div class="d-flex mb-3">
-      <input type="text" class="form-control me-2" placeholder="Buscar personagem"
-        [(ngModel)]="searchTerm"
-        (input)="onSearch()" />
-    </div>
-
-    <div class="row g-3">
-      <div class="col-md-3" *ngFor="let char of characters">
-        <div class="card h-100">
-          <img [src]="char.image" class="card-img-top" alt="Imagem do personagem" />
-          <div class="card-body">
-            <h5 class="card-title">{{ char.name }}</h5>
-            <p class="card-text">
-              <span class="badge bg-secondary">{{ char.status }}</span>
-            </p>
-            <a [routerLink]="['/characters', char.id]" class="btn btn-outline-primary btn-sm">Detalhes</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div *ngIf="loading" class="text-center my-3">Carregando...</div>
-    <div *ngIf="!hasMore && !loading" class="text-center my-3 text-muted">Fim dos resultados</div>
-  </div>
-  `,
+  templateUrl: './characters.html',
+  styleUrl: './characters.scss'
 })
 export class Characters implements OnInit {
   private api = inject(ApiService);

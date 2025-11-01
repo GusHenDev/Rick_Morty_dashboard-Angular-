@@ -7,26 +7,8 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-locations',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  template: `
-  <div class="container py-3">
-    <div class="d-flex mb-3">
-      <input type="text" class="form-control me-2" placeholder="Buscar localização"
-        [(ngModel)]="searchTerm"
-        (input)="onSearch()" />
-    </div>
-
-    <div class="list-group">
-      <a class="list-group-item list-group-item-action"
-        *ngFor="let loc of locations">
-        <div class="fw-bold">{{ loc.name }}</div>
-        <small>Tipo: {{ loc.type }} | Dimensão: {{ loc.dimension }}</small>
-      </a>
-    </div>
-
-    <div *ngIf="loading" class="text-center my-3">Carregando...</div>
-    <div *ngIf="!hasMore && !loading" class="text-center my-3 text-muted">Fim dos resultados</div>
-  </div>
-  `
+  templateUrl: './locations.html',
+  styleUrl: './locations.scss'
 })
 export class Locations implements OnInit {
   private api = inject(ApiService);

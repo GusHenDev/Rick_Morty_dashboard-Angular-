@@ -11,4 +11,9 @@ import { RouterModule } from '@angular/router';
 })
 export class Sidebar {
   @Input() collapsed = false;
+
+  toggleSidebar() {
+    this.collapsed = !this.collapsed;
+  }
+  
 }

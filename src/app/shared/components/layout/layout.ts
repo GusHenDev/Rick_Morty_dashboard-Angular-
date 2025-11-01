@@ -12,7 +12,7 @@ import { Sidebar } from '../sidebar/sidebar';
   styleUrl: './layout.scss'
 })
 export class Layout {
-  sidebarCollapsed = false;
+  sidebarCollapsed = true;
 
   toggleSidebar() {
     this.sidebarCollapsed = !this.sidebarCollapsed;
